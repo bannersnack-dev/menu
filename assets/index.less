@@ -1,12 +1,6 @@
 @menuPrefixCls: rc-menu;
 
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.eot');
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf') format('truetype'), url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.svg?#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@bgColor: #dfe0e6;
 
 .@{menuPrefixCls} {
   outline: none;
@@ -43,17 +37,17 @@
 
   &-item-active,
   &-submenu-active > &-submenu-title {
-    background-color: #eaf8fe;
+    background-color: @bgColor;
   }
 
   &-item-selected {
-    background-color: #eaf8fe;
+    background-color: @bgColor;
     // fix chrome render bug
     transform: translateZ(0);
   }
 
   &-submenu-selected {
-    background-color: #eaf8fe;
+    background-color: @bgColor;
   }
 
   & > li&-submenu {
